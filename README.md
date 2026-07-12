@@ -107,7 +107,7 @@ Accessed the website using the S3 Website Endpoint.
 
 ## 🖥 Website Home Page
 
-![Website](screenshot/visible.png)
+![Website](screenshot/home.png)
 
 ---
 
@@ -125,7 +125,7 @@ Accessed the website using the S3 Website Endpoint.
 
 ## 🌐 Static Website Hosting
 
-![Static Website](screenshot/STATICWEBSITEHOSTING.png)
+![Static Website](screenshot/STATIC-WEBSITE-HOSTING.png)
 
 ---
 
@@ -137,7 +137,7 @@ Accessed the website using the S3 Website Endpoint.
 
 ## 🔄 Cross-Region Replication Rule
 
-![Replication Rule](screenshot/REPLICATIONRULE.png)
+![Replication Rule](screenshot/REPLICATION-RULE.png)
 
 ---
 
