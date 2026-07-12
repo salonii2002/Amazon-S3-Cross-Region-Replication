@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AWS Cloud Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== OPENING PAGE ===== */
+.opening-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #232f3e, #1a1f2b);
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+.opening-page h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.opening-page p {
+  opacity: 0.85;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.open-btn {
+  padding: 14px 35px;
+  border: none;
+  border-radius: 30px;
+  background: #ff9900;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-btn:hover {
+  background: #e67e00;
+  transform: translateY(-3px);
+}
+
+/* ===== MAIN SITE ===== */
+#mainSite {
+  display: none;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #232f3e, #1a1f2b);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #232f3e;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #ff9900;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #232f3e;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #ff9900;
+}
+
+.steps {
+  max-width: 800px;
+  margin: auto;
+}
+
+.steps li {
+  background: white;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-left: 5px solid #ff9900;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.security-list li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #232f3e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING PAGE -->
+<div class="opening-page" id="openingPage">
+  <h1>AWS Cloud Project</h1>
+  <p>S3 Cross-Region Replication System</p>
+  <button class="open-btn" onclick="openProject()">Explore Project</button>
+</div>
+
+<!-- MAIN SITE -->
+<div id="mainSite">
+
+<header>
+<h1>Amazon S3 Cross-Region Replication</h1>
+<p>Secure • Automated • Cost-Effective Cloud Backup Solution</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#architecture">Architecture</a>
+<a href="#working">Working</a>
+<a href="#security">Security</a>
+<a href="#future">Future Scope</a>
+</nav>
+
+<section id="about">
+<h2>Project Overview</h2>
+<div class="card-grid">
+<div class="card">
+<h3>Objective</h3>
+<p>To demonstrate how Amazon S3 automatically replicates data from one AWS region to another for backup and disaster recovery.</p>
+</div>
+<div class="card">
+<h3>Problem Statement</h3>
+<p>Single-region storage may cause data loss during outages. This project ensures data safety using multi-region replication.</p>
+</div>
+<div class="card">
+<h3>Solution</h3>
+<p>Amazon S3 Cross-Region Replication copies objects automatically without manual intervention.</p>
+</div>
+</div>
+</section>
+
+<section id="architecture">
+<h2>Architecture</h2>
+<div class="card">
+<p><strong>Flow:</strong><br><br>
+User uploads file → Source S3 Bucket (Region A) → Replication Rule → Destination S3 Bucket (Region B)
+</p>
+</div>
+</section>
+
+<section id="working">
+<h2>How It Works</h2>
+<ul class="steps">
+<li>Two S3 buckets are created in different AWS regions.</li>
+<li>Versioning is enabled on both buckets.</li>
+<li>A replication rule is configured on the source bucket.</li>
+<li>IAM role allows secure replication between buckets.</li>
+<li>When a file is uploaded, AWS replicates it automatically.</li>
+</ul>
+</section>
+
+<section id="security">
+<h2>Security & Safety</h2>
+<div class="card">
+<ul class="security-list">
+<li>✔ Buckets are private with Block Public Access enabled</li>
+<li>✔ IAM roles follow least-privilege principle</li>
+<li>✔ Server-side encryption protects stored data</li>
+<li>✔ Versioning prevents accidental data loss</li>
+<li>✔ AWS managed infrastructure ensures compliance</li>
+</ul>
+</div>
+</section>
+
+<section id="future">
+<h2>Future Scope</h2>
+<div class="card-grid">
+<div class="card">
+<h3>Lifecycle Policies</h3>
+<p>Move old data to Glacier to reduce storage cost.</p>
+</div>
+<div class="card">
+<h3>Monitoring</h3>
+<p>Track replication status using AWS CloudWatch.</p>
+</div>
+<div class="card">
+<h3>Event Notifications</h3>
+<p>Trigger alerts when files are uploaded or replicated.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 | AWS Cloud Project<br>
+Designed for Academic Purpose</p>
+</footer>
+
+</div>
+
+<script>
+function openProject() {
+  document.getElementById("openingPage").style.display = "none";
+  document.getElementById("mainSite").style.display = "block";
+  document.body.style.background = "#f4f6f9";
+}
+</script>
+
+</body>
+</html>
