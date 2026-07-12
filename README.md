@@ -107,37 +107,43 @@ Accessed the website using the S3 Website Endpoint.
 
 ## 🖥 Website Home Page
 
-![Website](screenshots/visible.png)
+![Website](Amazon-S3-Cross-Region-Replication
+/screenshots/visible.png)
 
 ---
 
 ## 📦 Source Bucket
 
-![Source Bucket](screenshots/source-bucket.png)
+![Source Bucket](Amazon-S3-Cross-Region-Replication
+/screenshots/source-bucket.png)
 
 ---
 
 ## 🌎 Destination Bucket
 
-![Destination Bucket](screenshots/destination-bucket.png)
+![Destination Bucket](Amazon-S3-Cross-Region-Replication
+/screenshots/destination-bucket.png)
 
 ---
 
 ## 🌐 Static Website Hosting
 
-![Static Website](screenshots/STATICWEBSITEHOSTING.png)
+![Static Website](Amazon-S3-Cross-Region-Replication
+/screenshots/STATICWEBSITEHOSTING.png)
 
 ---
 
 ## 🔐 Bucket Policy
 
-![Bucket Policy](screenshots/BUCKETPOLICY.png)
+![Bucket Policy](Amazon-S3-Cross-Region-Replication
+/screenshots/BUCKETPOLICY.png)
 
 ---
 
 ## 🔄 Cross-Region Replication Rule
 
-![Replication Rule](screenshots/REPLICATIONRULE.png)
+![Replication Rule](Amazon-S3-Cross-Region-Replication
+/screenshots/REPLICATIONRULE.png)
 
 ---
 
@@ -145,8 +151,10 @@ Accessed the website using the S3 Website Endpoint.
 
 **Source Bucket (Primary Region)** | **Destination Bucket (Replica Region)**
 
-![Replication Proof](screenshots/SOURCE.png)
-![Replication Proof](screenshots/DESTINATION.png)
+![Replication Proof](Amazon-S3-Cross-Region-Replication
+/screenshots/SOURCE.png)
+![Replication Proof](Amazon-S3-Cross-Region-Replication
+/screenshots/DESTINATION.png)
 
 
 **Objects Successfully Replicated Using Amazon S3 Cross-Region Replication (CRR).**
